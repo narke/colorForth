@@ -6,11 +6,11 @@ Testing
 -------
 
 Compile:
-		$ make
+	$ make
 
 Run Bochs:
-		$ bochs -f bochs_colorforth
+	$ bochs -f bochs_colorforth
 
 
 It looks like:
-(http://narke.free.fr/Computer/colorforth.png)
+![colorForth](http://narke.free.fr/Computer/colorforth.png)
