@@ -33,7 +33,7 @@ Godd	equ Gods-750*4
 mains	equ Godd-1500*4
 maind	equ mains-750*4
 
-%include 'boot.nasm'
+%include 'boot.asm'
 
 ; org = 0x261
 
@@ -685,7 +685,7 @@ last_:
 	mov eax, (last-start)/4
 	ret
 
-%include 'gen.nasm'
+%include 'gen.asm'
 
 yellow	equ 0xffff00
 
