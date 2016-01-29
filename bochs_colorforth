@@ -8,18 +8,14 @@ megs: 32
 boot: a
 
 floppya: 1_44=cf2012.img, status=inserted
-#floppya: 1_44=fd_aug.img, status=inserted
 
 log: ./bochs.out
-keyboard_serial_delay: 200
-#floppy_command_delay: 500
+keyboard: serial_delay=200
 display_library: sdl
-vga_update_interval: 300000
-#ips:  1000000
+vga: update_freq=10
 mouse: enabled=0
 private_colormap: enabled=0
-i440fxsupport: enabled=0
-#newharddrivesupport: enabled=1
+pci: enabled=0
 
 # Uncomment this to write all bochs debugging messages to
 # bochs.out.  This produces a lot of output, but can be very

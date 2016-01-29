@@ -17,6 +17,8 @@ Run on Bochs:
 
 	$ bochs -f bochs_colorforth
 
+On Bochs prompt type 'c' to continue the execution.
+
 Or run on Qemu:
 
     $ qemu-system-i386 -boot a -fda cf2012.img
