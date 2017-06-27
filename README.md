@@ -28,3 +28,7 @@ On Bochs:
 
 On Qemu:
 ![colorForth](https://raw.githubusercontent.com/narke/colorForth/master/screenshots/colorforth_qemu.png "colorForth on Qemu")
+
+# License
+
+It's in public domain.
