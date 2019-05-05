@@ -15,13 +15,13 @@ Compile:
 
 Run on Bochs:
 
-	$ bochs -f bochs_colorforth
+	$ make bochs
 
 On Bochs prompt type 'c' to continue the execution.
 
 Or run on Qemu:
 
-    $ qemu-system-i386 -boot a -fda cf2012.img
+    $ make qemu
 
 On Bochs:
 ![colorForth](https://raw.githubusercontent.com/narke/colorForth/master/screenshots/colorforth_bochs.png "colorForth on Bochs")

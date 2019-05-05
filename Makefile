@@ -1,13 +1,19 @@
 all:
-	nasm -l color.lst -o color.bin color.asm
-	cat color.bin icons.fnt cfdos4cf.blk > cf2012.img
+	nasm -l cf2019.lst -o cf2019.img cf2019.asm
 
 ndisasm:
-	# Disassemble the colorForth image
-	# The image starts in 16 bit Real Mode   : cf2012.img.16.dasm
-	ndisasm -e0x0000 -i -b 16 -k0x00B3,0x3FF4D cf2012.img > cf2012.img.16.dasm
-	# Then switches to 32 bit Protected Mode : cf2012.img.32.dasm
-	ndisasm -e0x00B3 -i -b 32 -k0x2F4D,0x3D000 cf2012.img > cf2012.img.32.dasm
+	echo "start address  avoid n bytes from address  filename     output filename"
+	#ndisasm -b 32    -e 0x00000712     -k 0x00010000,0x00000FAD cf2019.img > cf2019.dasm
+	echo "start address   filename     output filename"
+	#ndisasm -b 32 -e 0x00000F2D    cf2019.img > cf2019.dasm
+	#ndisasm -b 32 -e 0x00000712   cf2019.img > cf2019.dasm
+	ndisasm -b 32 -e 0x00000000   cf2019.img > cf2019.dasm
+
+qemu:
+	qemu-system-i386 -drive format=raw,file=cf2019.img,if=floppy
+
+bochs:
+	bochs -f cf2019.bxrc
 
 clean:
-	rm -f color.lst color.bin cf2012.img cf2012.img.16.dasm cf2012.img.32.dasm
+	rm -f cf2019.lst cf2019.img cf2019.dasm
